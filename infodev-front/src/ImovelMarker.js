@@ -18,7 +18,9 @@ class ImovelMarker extends Component {
 
     render() {
         return(
-            <Marker position={[this.props.lat, this.props.lng]}>
+            <Marker position={[this.props.lat, this.props.lng]} ref={(marker) => {this.marker = marker;}} 
+                    onMouseOver={() => {this.marker.leafletElement.openPopup();}}
+                    onMouseOut={() => {this.marker.leafletElement.closePopup();}}>
                 <Popup>
                     <div className="popup-container">
                         <div className="popup-header">
