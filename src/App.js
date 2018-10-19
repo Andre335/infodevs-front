@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import ImovelMaps from './ImovelMaps';
+import ImovelMaps from './components/ImovelMaps';
 import CSVReader from 'react-csv-reader';
 
 class App extends Component {
